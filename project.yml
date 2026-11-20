@@ -1,0 +1,37 @@
+name: LanmeiVideo
+options:
+  bundleIdPrefix: me.lanmei
+  deploymentTarget:
+    iOS: "14.0"
+  createIntermediateGroups: true
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "14.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    CODE_SIGN_IDENTITY: ""
+    CODE_SIGNING_REQUIRED: "NO"
+    CODE_SIGNING_ALLOWED: "NO"
+    DEVELOPMENT_TEAM: ""
+
+targets:
+  LanmeiVideo:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+        excludes:
+          - "Info.plist"
+    settings:
+      base:
+        INFOPLIST_FILE: Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: me.lanmei.video
+        PRODUCT_NAME: LanmeiVideo
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ENABLE_BITCODE: "NO"
+        SWIFT_OPTIMIZATION_LEVEL: "-O"
